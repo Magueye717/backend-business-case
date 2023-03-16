@@ -4,7 +4,7 @@ const router = express.Router();
 const packageController = require("../controllers/package.controller");
 
 // Package routes
-router.post("/", packageController.create);
+router.post("/:id?", packageController.create);
 router.get("/", packageController.findAll);
 router.get("/:id", packageController.findOne);
 router.put("/:id", packageController.update);

@@ -14,6 +14,7 @@ const io = require("socket.io")(server, {
     methods: ["GET", "POST"],
   },
 });
+
 app.use(cors());
 
 const bodyParser = require("body-parser");
@@ -55,6 +56,8 @@ io.on("connection", (socket) => {
           new: true,
         }
       );
+
+      //Send the edited delivery as a broadcast to the client side
       socket.broadcast.emit("delivery_updated", delivery);
     } catch (error) {
       console.error(error);
@@ -64,7 +67,7 @@ io.on("connection", (socket) => {
   //Change delivery status event
   socket.on("status_changed", async (data) => {
     let today = new Date();
-    let currentTime = today.getHours() + "h:" + today.getMinutes();
+    let currentTime = today.getHours() + ":" + today.getMinutes();
 
     try {
       const { delivery_id, status } = data;
