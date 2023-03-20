@@ -69,7 +69,7 @@ exports.findOne = async (req, res) => {
 
   try {
     // Retrieve Delivery from the database
-    const delivery = await Delivery.findById(id).populate("package_id");
+    const delivery = await Delivery.findById(id);
 
     if (!delivery)
       res.status(404).send({ message: "Not found Delivery with id " + id });
@@ -97,9 +97,10 @@ exports.update = async (req, res) => {
 
   try {
     // Retrieve and edit the Delivery
-    const updatedDelivery = await Delivery.findByIdAndUpdate(id, req.body, {
-      useFindAndModify: false,
-    });
+    const updatedDelivery = await Delivery.findOneAndUpdate(
+      { _id: id },
+      req.body
+    );
 
     if (!updatedDelivery) {
       res.status(404).send({
