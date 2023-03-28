@@ -4,6 +4,7 @@ const server = require("http").createServer(app);
 let cors = require("cors");
 
 require("dotenv/config");
+
 const mongoose = require("mongoose");
 
 const Delivery = require("./model/Delivery");
@@ -46,15 +47,13 @@ io.on("connection", (socket) => {
   //Change delivery location event
   socket.on("location_changed", async (data) => {
     const { delivery_id, location } = data;
+    console.log({ data });
     try {
       // find and update
-      const delivery = await Delivery.findByIdAndUpdate(
-        delivery_id,
+      const delivery = await Delivery.findOneAndUpdate(
+        { _id: delivery_id },
         { location },
-        {
-          useFindAndModify: false,
-          new: true,
-        }
+        { new: true }
       );
 
       //Send the edited delivery as a broadcast to the client side
@@ -86,13 +85,10 @@ io.on("connection", (socket) => {
         }
       };
       // find and update
-      const delivery = await Delivery.findByIdAndUpdate(
-        delivery_id,
+      const delivery = await Delivery.findOneAndUpdate(
+        { _id: delivery_id },
         statusToUpdate(),
-        {
-          useFindAndModify: false,
-          new: true,
-        }
+        { new: true }
       );
 
       //Send the edited delivery to the client side
@@ -108,16 +104,14 @@ io.on("connection", (socket) => {
 
     try {
       // find and update
-      const updatedDelivered = await Delivery.findByIdAndUpdate(
-        delivery_id,
+      const delivery = await Delivery.findOneAndUpdate(
+        { _id: delivery_id },
         incomingInput,
-        {
-          useFindAndModify: false,
-          new: true,
-        }
+        { new: true }
       );
+
       //Send the edited delivery as a broadcast to the client side
-      socket.broadcast.emit("delivery_updated", updatedDelivered);
+      socket.broadcast.emit("delivery_updated", delivery);
     } catch (error) {
       console.error(error);
     }

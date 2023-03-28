@@ -107,9 +107,10 @@ exports.update = async (req, res) => {
 
   try {
     // Retrieve and edit the Package
-    const updatedPackage = await Package.findByIdAndUpdate(id, req.body, {
-      useFindAndModify: false,
-    });
+    const updatedPackage = await Package.findOneAndUpdate(
+      { _id: id },
+      req.body
+    );
 
     if (!updatedPackage) {
       res.status(404).send({
