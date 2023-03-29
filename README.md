@@ -21,7 +21,7 @@ The Driver sees on a map the point of pick-up and delivery. Every 20 seconds, hi
  #### Composition
  It is composed of two parts: the server (backend) and the client (frontend).
  
-- Backend
+-- Backend
  
 The server is made with Node.js because it is fast and robust. 
 Here is the structure of the project:
