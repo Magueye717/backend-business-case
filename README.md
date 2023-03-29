@@ -31,7 +31,7 @@ On the controllers folder, there are two files (`delivery.controller.js` and `pa
 
 In the routes folder, there are `delivery.route.js` and `package.route.js` which allow to define the routes of the different endpoints.
  
-The `package-tracker.postman_collection.json` file est la collection de l'ensemble des endpoints expoter depuis postman.
+The `package-tracker.postman_collection.json` file is the collection of all endpoints expoter from postman.
  
  - Frontend
  
