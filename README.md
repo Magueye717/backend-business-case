@@ -13,8 +13,10 @@ c)When the status changes from in-transit to delivered or failed, set the end_ti
 The Driver sees on a map the point of pick-up and delivery. Every 20 seconds, his position is retrieved to update the delivery.
 - The `Costomer` also called tracker, he can search a package by its identifier and see on a map in real time the location of his package according to the position of the Driver.
  
+ ### Composition
  It is composed of two parts: the server (backend) and the client (frontend).
  
+ - Backend
 The server is made with Node.js because it is fast and robust. 
 Here is the structure of the project:
 The `app.js` is the bootstrap file. This file is the entry point of the application. On the `app.js`, we have defined the middlewares, created the server and all the socket requests for the real times connection with the client.
@@ -24,6 +26,8 @@ On the model folder, there are the two files (`Delivery.js` and `Package.js`) to
 On the controllers folder, there are two files (`delivery.controller.js` and `package.controller.js`). These two files encapsulate the application logic of the application in other words the CRUP operations for the Delivery and Package entities.
 
 In the routes folder, there are `delivery.route.js` and `package.route.js` which allow to define the routes of the different endpoints.
+ 
+ - Frontend
 
 
 TODO
