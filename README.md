@@ -18,7 +18,7 @@ c)When the status changes from in-transit to delivered or failed, set the end_ti
 The Driver sees on a map the point of pick-up and delivery. Every 20 seconds, his position is retrieved to update the delivery.
 - The `Costomer` also called tracker, can search a package by its identifier and see on a map in real time the location of his package according to the position of the Driver.
  
- ### Composition
+ #### Composition
  It is composed of two parts: the server (backend) and the client (frontend).
  
 - Backend
@@ -48,8 +48,8 @@ Here are the packages used
 
 
 TODO
-# Steps 
-### Run the backend (Node.Js)
+#### Steps 
+#### Run the backend (Node.Js)
 #### 1. Clone the project with this link  👉  https://github.com/Magueye717/backend-business-case.git
 #### 2. Install the packages with this commande : `npm install` or `yarn install`
 #### 3. Set de Database url for the connection to mongodb. Edit the `DEV_DB_URL` or `PROD_DB_URL` variable on the `.env` file.
