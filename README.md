@@ -17,6 +17,7 @@ The Driver sees on a map the point of pick-up and delivery. Every 20 seconds, hi
  It is composed of two parts: the server (backend) and the client (frontend).
  
 - Backend
+ 
 The server is made with Node.js because it is fast and robust. 
 Here is the structure of the project:
 The `app.js` is the bootstrap file. This file is the entry point of the application. On the `app.js`, we have defined the middlewares, created the server and all the socket requests for the real times connection with the client.
