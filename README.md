@@ -12,7 +12,7 @@ TODO
 #### 3. Set de Database url for the connection to mongodb. Edit the DEV_DB_URL | PROD_DB_URL variable in the .env file.
    NB: If you want to use the PROD_DB_URL, change the mongoose connection like this : 
     `mongoose.connect(process.env.PROD_DB_URL).then(() => console.log("connected to the DB"));`
-## 4. npm start or yarn start
+#### 4. npm start or yarn start
 
 
 #### Run the frontend (React.js)
