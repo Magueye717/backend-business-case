@@ -29,6 +29,15 @@ On the controllers folder, there are two files (`delivery.controller.js` and `pa
 In the routes folder, there are `delivery.route.js` and `package.route.js` which allow to define the routes of the different endpoints.
  
  - Frontend
+ 
+The frontend is made with React js. In the components folder, we find all the shared components needed for the application.  In the data folder, we have all the data like maps and markers etc.. In the pages folder we find the different pages of the application. 
+
+Here are the packages used 
+
+- Map box for the maps
+- Openweathermap Api for location coordinates
+- Axios for queries
+- socket.io-client for real time
 
 
 TODO
