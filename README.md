@@ -1,4 +1,9 @@
+#### Description:
+ This project allows tracking of packages in real time.
+ It is composed of two parts: the server (backend) and the client (frontend).
+
 # Steps
+### Run the backend
 
 ### 1. npm install
 ### 2. Set the DEV_DB_URL | PROD_DB_URL variable in the .env
