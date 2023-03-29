@@ -11,7 +11,7 @@ Each status change updates the delivery.
 b)When the status changes from picked-up to in-transit, set the start_time to current time
 c)When the status changes from in-transit to delivered or failed, set the end_time to current time.
 The Driver sees on a map the point of pick-up and delivery. Every 20 seconds, his position is retrieved to update the delivery.
--The `Costomer`, also called `Tracker`, sees on a map in real time the location of his package according to the position of the Driver.
+- The `Costomer`, also called `Tracker`, sees on a map in real time the location of his package according to the position of the Driver.
  
  It is composed of two parts: the server (backend) and the client (frontend).
  
