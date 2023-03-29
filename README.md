@@ -2,6 +2,17 @@
 #### Video Demo:  <URL HERE>
 #### Description:
  This project allows tracking of packages in real time.
+ 
+ It is composed of 3 main actors.
+- The `Admin` has the role to add, delete, modify or list packages and deliveries (CRUD operations)
+- The `Driver` who is in charge of the delivery and change the status of the delivery (picked-up, in-transite, delivered or failed).  
+Each status change updates the delivery.
+ a) When the status changes from open to picked-up, set the pickup_time to current time
+b)When the status changes from picked-up to in-transit, set the start_time to current time
+c)When the status changes from in-transit to delivered or failed, set the end_time to current time.
+The Driver sees on a map the point of pick-up and delivery. Every 20 seconds, his position is retrieved to update the delivery.
+-The `Costomer`, also called `Tracker`, sees on a map in real time the location of his package according to the position of the Driver.
+ 
  It is composed of two parts: the server (backend) and the client (frontend).
  
 The server is made with Node.js because it is fast and robust. 
