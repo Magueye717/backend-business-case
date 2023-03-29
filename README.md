@@ -4,6 +4,7 @@
 
 # Steps
 ### Run the backend
+### 1. Clone the project with this link https://github.com/Magueye717/backend-business-case.git
 
 ### 1. npm install
 ### 2. Set the DEV_DB_URL | PROD_DB_URL variable in the .env
