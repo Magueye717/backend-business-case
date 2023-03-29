@@ -7,6 +7,7 @@ It is composed of 3 main actors.
 - The `Admin` has the role to add, delete, modify or list packages and delivery (CRUD operations)
 - The `Driver` can search for a delivery by its ID and start the delivery. He can change the status of the delivery (`picked-up`, `in-transite`, `delivered` or `failed`).  
 Each status change updates the delivery.
+ 
  a) When the status changes from open to picked-up, set the pickup_time to current time.
  
 b)When the status changes from picked-up to in-transit, set the start_time to current time.
