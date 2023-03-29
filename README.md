@@ -47,8 +47,8 @@ Here are the packages used
 - socket.io-client for real time
 
 
-TODO
-#### Steps 
+####TODO
+ 
 #### Run the backend (Node.Js)
 #### 1. Clone the project with this link  👉  https://github.com/Magueye717/backend-business-case.git
 #### 2. Install the packages with this commande : `npm install` or `yarn install`
@@ -59,7 +59,7 @@ TODO
 
 ####
 
-### Run the frontend (React.js)
+#### Run the frontend (React.js)
 #### 5. Clone the project with this link  👉  https://github.com/Magueye717/frontend-business-case.git
 #### 6. Install the packages with this commande : `npm install` or `yarn install`
 #### 7. Run commande `npm start` or `yarn start`
