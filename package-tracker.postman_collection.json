@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "ced929ee-6790-4817-9f0c-352483071a5f",
+		"name": "package-tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Package",
+			"item": [
+				{
+					"name": "getAllPackages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/package",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"package"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePackage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Just Gozem tezte case 3\",\n\t\"weight\": 30,\n\t\"width\": 120,\n\t\"height\": 90,\n\t\"depth\": 64,\n\t\"from_name\": \"Magueye\",\n\t\"from_address\": \"Louga\",\n\t\"to_name\": \"Ndeye Awa\",\n\t\"to_address\": \"Maroc\",\n\t  \"from_location\": {\n        \"lng\": -17.366512,\n        \"lat\": 14.767871\n    },\n    \"to_location\": {\n        \"lng\": -17.4716764,\n        \"lat\": 14.7463362\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/package",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"package"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPackageById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/package/641992f22a2898406dac2f1a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"package",
+								"641992f22a2898406dac2f1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePackage",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from_name\": \"Aftab\"\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/package/641992f22a2898406dac2f1a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"package",
+								"641992f22a2898406dac2f1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePackageById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/package/641992f22a2898406dac2f1a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"package",
+								"641992f22a2898406dac2f1a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "getAllDeliveries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delivery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateDelivery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pickup_time\": \"10:15\",\n\t\"start_time\": \"12:05\",\n\t\"end_time\": \"18:40\",\n\t\"location\": {\n\t\t\"lat\": \"123 somewhere\",\n\t\t\"lng\": \"456 somewhere\"\n\t},\n\t\"status\": \"open\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/delivery/6414f0bfb8044ee0c5c435e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delivery",
+								"6414f0bfb8044ee0c5c435e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDeliveryId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/delivery/641993982a2898406dac2f26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delivery",
+								"641993982a2898406dac2f26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDelivery",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"status\": \"delivered\",\n    \"location\": {\n        \"lng\": \"-17.31131\",\n        \"lat\": \"14.77977\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/delivery/6420c80cfac34c2002828afb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delivery",
+								"6420c80cfac34c2002828afb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDeliveryId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/delivery/641993982a2898406dac2f26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"delivery",
+								"641993982a2898406dac2f26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
